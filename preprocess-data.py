@@ -19,7 +19,7 @@ def main():
 
 def process_lang_data(data_path, lang, punctuation, train_indices, val_indices, test_indices):
     lang_data = load_data(data_path)
-    lang_model = spacy.load(lang, disable=['tagger', 'parser', 'ner'])
+    lang_model = spacy.load('en', disable=['tagger', 'parser', 'ner'])
 
     # Tokenize the sentences
     processed_sentences = [process_sentences(lang_model, sentence, punctuation) for sentence in tqdm(lang_data)]
