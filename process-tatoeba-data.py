@@ -5,7 +5,7 @@ def main():
     # Split the original dataset into parallel English and French txts
     eng_sentences = []
     fra_sentences = []
-    with open('data/raw/fra.txt') as f:
+    with open('data/raw/hin.txt') as f:
         for line in f:
             line = re.split(r'\t+', line)
             eng_sentences.append(line[0])
@@ -14,7 +14,7 @@ def main():
     with open('data/raw/english.txt', 'w') as f:
         for line in eng_sentences:
             f.write(line + '\n')
-    with open('data/raw/french.txt', 'w') as f:
+    with open('data/raw/hindi.txt', 'w') as f:
         for line in fra_sentences:
             f.write(line + '\n')
 
