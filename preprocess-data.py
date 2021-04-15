@@ -14,7 +14,7 @@ def main():
     train_indices, val_indices, test_indices = generate_indices(len(load_data(project_path + '/data/raw/english.txt')))
 
     process_lang_data(project_path + '/data/raw/english.txt', 'en', punctuation, train_indices, val_indices, test_indices)
-    process_lang_data(project_path + '/data/raw/french.txt', 'fr', punctuation, train_indices, val_indices, test_indices)
+    process_lang_data(project_path + '/data/raw/hindi.txt', 'hi', punctuation, train_indices, val_indices, test_indices)
 
 
 def process_lang_data(data_path, lang, punctuation, train_indices, val_indices, test_indices):
@@ -68,7 +68,7 @@ def process_sentences(lang_model, sentence, punctuation):
                      sentence (arr): Tokenized sentence
      """
     sentence = sentence.lower()
-    sentence = [tok.text for tok in lang_model.tokenizer(sentence) if tok.text not in punctuation]
+    sentence = [tok for tok in sentence.split(" ") if tok not in punctuation]
 
     return sentence
 
