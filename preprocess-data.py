@@ -99,9 +99,9 @@ def generate_indices(data_len):
     random.shuffle(indices)
 
     # 80:20:0 train validation test split
-    train_idx = int(data_len * 0.8)
-    val_idx = train_idx + int(data_len * 0.2)
-    return indices[:train_idx], indices[train_idx:val_idx], indices[val_idx:]
+    train_idx = int(data_len)
+    val_idx = train_idx - int(data_len * 0.2)
+    return indices[:train_idx], indices[val_idx:train_idx]:, indices[val_idx:]
 
 
 if __name__ == "__main__":
