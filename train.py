@@ -15,7 +15,7 @@ from model import LanguageTransformer
 
 
 @click.command()
-@click.argument('num_epochs', type=int,  default=20)
+@click.argument('num_epochs', type=int,  default=200)
 @click.argument('max_seq_length', type=int,  default=96)
 @click.argument('num_tokens', type=int,  default=2000)
 @click.argument('vocab_size', type=int,  default=10000 + 4)
