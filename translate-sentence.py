@@ -11,7 +11,7 @@ def main():
     lang_model = spacy.load('en')
     with open('data/processed/en/freq_list.pkl', 'rb') as f:
         en_freq_list = pickle.load(f)
-    with open('data/processed/fr/freq_list.pkl', 'rb') as f:
+    with open('data/processed/hi/freq_list.pkl', 'rb') as f:
         fr_freq_list = pickle.load(f)
 
     # Tokenize input
