@@ -15,7 +15,7 @@ def main():
         for line in eng_sentences:
             f.write(line + '\n')
     with open('data/raw/hindi.txt', 'w') as f:
-        for line in fra_sentences:
+        for line in hin_sentences:
             f.write(line + '\n')
 
 
