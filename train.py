@@ -31,12 +31,12 @@ def main(**kwargs):
     project_path = str(Path(__file__).resolve().parents[0])
 
     train_dataset = ParallelLanguageDataset(project_path + '/data/processed/en/train.pkl',
-                                            project_path + '/data/processed/fr/train.pkl',
+                                            project_path + '/data/processed/hi/train.pkl',
                                             kwargs['num_tokens'], kwargs['max_seq_length'])
     # Set batch_size=1 because all the batching is handled in the ParallelLanguageDataset class
     train_loader = DataLoader(train_dataset, batch_size=1, shuffle=True, num_workers=4, pin_memory=True)
     valid_dataset = ParallelLanguageDataset(project_path + '/data/processed/en/val.pkl',
-                                            project_path + '/data/processed/fr/val.pkl',
+                                            project_path + '/data/processed/hi/val.pkl',
                                             kwargs['num_tokens'], kwargs['max_seq_length'])
     valid_loader = DataLoader(valid_dataset, batch_size=1, shuffle=True, num_workers=4, pin_memory=True)
 
